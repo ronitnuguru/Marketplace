@@ -14,6 +14,7 @@
     <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>Storefront Setup Assistant</label>
     <navType>Standard</navType>
+    <tabs>Storefront</tabs>
     <tabs>Storefront_Collection__c</tabs>
     <tabs>Storefront_Item__c</tabs>
     <tabs>Storefront_Item_Setup__c</tabs>

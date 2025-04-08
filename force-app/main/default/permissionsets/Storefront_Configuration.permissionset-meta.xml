@@ -170,6 +170,10 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <tabSettings>
+        <tab>Storefront</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
         <tab>Storefront_Collection__c</tab>
         <visibility>Visible</visibility>
     </tabSettings>
@@ -187,10 +191,6 @@
     </tabSettings>
     <tabSettings>
         <tab>Welcome_Mat_Item__c</tab>
-        <visibility>Visible</visibility>
-    </tabSettings>
-    <tabSettings>
-        <tab>standard-SemanticModel</tab>
         <visibility>Visible</visibility>
     </tabSettings>
 </PermissionSet>

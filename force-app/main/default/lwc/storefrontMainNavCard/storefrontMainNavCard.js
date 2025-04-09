@@ -8,6 +8,7 @@ export default class StorefrontMainNavCard extends LightningElement {
 
     navCollections;
     navCollectionsError;
+    navCollectionsNull;
     itemDetails;
 
     displaySpinner;
@@ -18,6 +19,8 @@ export default class StorefrontMainNavCard extends LightningElement {
             this.displaySpinner = false;
             this.navCollections = data;
             this.navCollectionsError = undefined;
+            console.log(this.navCollections);
+            this.navCollectionsNull = this.navCollections.length === 0;
             this.manualHandleNavSelect(this.selectedNavItem);
         } else if (error) {
             this.displaySpinner = false;

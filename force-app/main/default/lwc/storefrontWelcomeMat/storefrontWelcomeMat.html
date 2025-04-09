@@ -41,6 +41,12 @@
                         </li>
                     </template>
                 </div>
+                <template lwc:if={welcomeMatNull}>
+                    <c-show-illustration
+                        header="Data not available"
+                        description="The Welcome Mat Items data you're trying to access isn't available. If the issue still persists, ask your admin for help."
+                    ></c-show-illustration>
+                </template>
             </template>
         </ul>
     </div>

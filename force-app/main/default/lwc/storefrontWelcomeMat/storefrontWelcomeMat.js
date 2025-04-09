@@ -17,6 +17,7 @@ export default class StorefrontWelcomeMat extends NavigationMixin(LightningEleme
     displaySpinner = true;
     welcomeMatCollection;
     welcomeMatError;
+    welcomeMatNull;
 
     @wire(getWelcomeMatItems)
     wiredItems({ error, data }) {
@@ -24,6 +25,7 @@ export default class StorefrontWelcomeMat extends NavigationMixin(LightningEleme
             this.displaySpinner = false;
             this.welcomeMatCollection = data;
             this.welcomeMatError = undefined;
+            this.welcomeMatNull = this.welcomeMatCollection.length === 0;
         } else if (error) {
             this.displaySpinner = false;
             this.welcomeMatCollection = undefined;

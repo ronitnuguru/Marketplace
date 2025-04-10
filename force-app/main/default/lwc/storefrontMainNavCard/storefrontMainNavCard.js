@@ -4,7 +4,7 @@ import getStorefrontCollectionItems from '@salesforce/apex/MarketplaceController
 
 export default class StorefrontMainNavCard extends LightningElement {
 
-    @api selectedNavItem = 'Agents';
+    @api selectedNavItem;
 
     navCollections;
     navCollectionsError;
@@ -19,9 +19,11 @@ export default class StorefrontMainNavCard extends LightningElement {
             this.displaySpinner = false;
             this.navCollections = data;
             this.navCollectionsError = undefined;
-            console.log(this.navCollections);
             this.navCollectionsNull = this.navCollections.length === 0;
-            this.manualHandleNavSelect(this.selectedNavItem);
+            if(this.navCollections){
+                this.selectedNavItem = this.navCollections[0].Name;
+                this.manualHandleNavSelect(this.selectedNavItem);
+            }
         } else if (error) {
             this.displaySpinner = false;
             this.navCollections = undefined;
